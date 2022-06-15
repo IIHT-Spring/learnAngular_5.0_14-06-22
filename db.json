@@ -1,10 +1,28 @@
 {
-    "users" :[
-        {
-            "name":"Rakesh",
-            "age":50,
-            "Gender":"Male",
-            "id":1
-        }
-    ]
+  "users": [
+    {
+      "name": "Rakesh",
+      "age": 50,
+      "Gender": "Male",
+      "id": 1
+    },
+    {
+      "name": "Nishant",
+      "age": "32",
+      "Gender": "Male",
+      "id": 2
+    },
+    {
+      "name": "Hitesh",
+      "age": "43`",
+      "Gender": "Male",
+      "id": 3
+    },
+    {
+      "name": "Supriya",
+      "age": "13",
+      "Gender": "Male",
+      "id": 4
+    }
+  ]
 }
