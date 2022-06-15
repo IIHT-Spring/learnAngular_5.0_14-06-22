@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import User from 'src/app/Entity/User';
+
 
 @Component({
   selector: 'app-user',
@@ -6,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userform.component.css'],
 })
 export class UserformComponent implements OnInit {
-  user = {
-    name: '',
-    age: 0,
-  };
+  user :User = new User();
+ 
   save() {
     console.log(this.user.name);
     console.log(this.user.age);
