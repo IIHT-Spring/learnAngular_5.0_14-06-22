@@ -2,16 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import User from 'src/app/Entity/User';
 import { UserService } from 'src/app/user.service';
 
-
 @Component({
   selector: 'app-user',
   templateUrl: './userform.component.html',
   styleUrls: ['./userform.component.css'],
 })
 export class UserformComponent implements OnInit {
-  user :User = new User();
-  users: User[] = []
- 
+  user: User = new User();
+  users: User[] = [];
+
+  deleteRow(user, index) {
+    const observable = this.userService.deleteUser(user);
+    observable.subscribe((response: any) => {
+      console.log(response);
+      this.users.splice(index, 1);
+    });
+  }
   save() {
     // console.log(this.user.name);
     // console.log(this.user.age);
@@ -19,24 +25,22 @@ export class UserformComponent implements OnInit {
     observable.subscribe(
       (response: any) => {
         console.log(response);
+        this.users.push(response);
       },
-      function(error) {
+      function (error) {
         console.log(error);
-        alert("Something went wrong please try again!")
-        
+        alert('Something went wrong please try again!');
       }
-    )
-
+    );
   }
 
-  constructor( public userService :UserService) {}
+  constructor(public userService: UserService) {}
 
   ngOnInit(): void {
     const promise = this.userService.getUsers();
     promise.subscribe((response) => {
       console.log(response);
       this.users = response as User[];
-      
-    })
+    });
   }
 }
