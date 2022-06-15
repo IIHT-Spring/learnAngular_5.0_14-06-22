@@ -1,0 +1,18 @@
+
+<div class="input-group mb-3" >
+    <span class="input-group-text" id="inputGroup-sizing-default">Enter your name</span>
+    <input type="text"  [(ngModel)]="user.name"  placeholder="enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <br/>
+
+  <div class="input-group mb-3" >
+    <span class="input-group-text" id="inputGroup-sizing-default">Enter your Age</span>
+    <input [(ngModel)]="user.age" placeholder="enter your age" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <br/>
+
+  <button type="button" (click)="save()" class="btn btn-secondary btn-lg">Submit</button>
+
+  
