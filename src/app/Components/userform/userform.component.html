@@ -59,10 +59,16 @@
 </button>
 
 <br />
+<br />
+
+<button type="button" (click)="sort()" class="btn btn-secondary btn-lg">
+  Sort
+</button>
+<br />
 
 <ol class="list-group list-group-numbered">
   <li class="list-group-item" *ngFor="let u of users; index as i">
-    <span> User's name is : {{ u.name }}</span>
+    <span> User's name is : {{ u.name | uppercase  }}</span>
     <br />
     <span>User's age is : {{ u.age }}</span>
     <br />

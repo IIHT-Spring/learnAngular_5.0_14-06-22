@@ -18,13 +18,14 @@ export class UserformComponent implements OnInit {
   //     this.users.splice(index, 1);
   //   });
   // }
-  deleteRow(user, index) {
+  deleteRow(user:User, index:number) {
+    console.log(index);
+    
     const observable = this.userService.deleteUser(user);
-    observable.subscribe((response:any) => {
+    observable.subscribe((response: any) => {
       console.log(response);
-      this.users.splice(index,1);
-      
-    })
+      this.users.splice(index, 1);
+    });
   }
   save() {
     // console.log(this.user.name);
@@ -40,6 +41,12 @@ export class UserformComponent implements OnInit {
         alert('Something went wrong please try again!');
       }
     );
+  }
+
+  sort() {
+    this.users.sort(function (user1, user2) {
+      return user1.age - user2.age;
+    });
   }
 
   constructor(public userService: UserService) {}

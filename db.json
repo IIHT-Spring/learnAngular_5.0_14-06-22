@@ -35,6 +35,18 @@
       "age": "22",
       "Gender": "Male",
       "id": 6
+    },
+    {
+      "name": "Jenny",
+      "age": "5",
+      "Gender": "Female",
+      "id": 7
+    },
+    {
+      "name": "Jeremy ",
+      "age": "70",
+      "Gender": "Male",
+      "id": 8
     }
   ]
 }
