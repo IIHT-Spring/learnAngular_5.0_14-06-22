@@ -1,0 +1,33 @@
+<p>validform works!</p>
+<form #userForm = "ngForm" (ngSubmit)="onsubmit(userForm.value)">
+  <div class="mb-3 row">
+    <label>Email</label>
+    <div class="col-sm-6">
+      <input
+        required
+        #email = "ngModel"
+        ngModel
+        type="email"
+        class="form-control"
+        name="username"
+        placeholder="enter your email"
+      />
+      <span *ngIf="email.invalid && email.touched" class="error">Email field is required</span>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label>Password</label>
+    <div class="col-sm-6">
+      <input
+        ngModel
+        type="password"
+        class="form-control"
+        placeholder="enter your password"
+        name="password"
+      />
+    </div>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>

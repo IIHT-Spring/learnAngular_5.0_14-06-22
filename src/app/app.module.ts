@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { EllipsisPipe } from './ellipsis.pipe';
+import { ValidformComponent } from './validform/validform.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { EllipsisPipe } from './ellipsis.pipe';
     NavbarComponent,
     AboutComponent,
     CounterComponent,
-    EllipsisPipe
+    EllipsisPipe,
+    ValidformComponent
   
   ],
   imports: [
